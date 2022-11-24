@@ -8,19 +8,19 @@
 // 9012 -> 12
 
 Console.WriteLine("Введите число : ");
-var num = Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
-int SumNum(in num)
+int SumNum(int num)
 {
+   int ost = 0;
+   int num1 = 0;
    while (num > 0)
    {
-        int num1 = num % 10;
+        num1 = num % 10;
+        ost = ost + num1;
+        num = num / 10;
    }
+return ost;
 }
-
-int num2 = num / 10;
-int num = num - num2;
-int result = 
-i = 0;
-
-
+int result = SumNum(num);
+Console.WriteLine(num+ " -> " +result);
